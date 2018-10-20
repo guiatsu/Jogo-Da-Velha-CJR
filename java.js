@@ -1,6 +1,9 @@
 let turno = 0;  // flag para saber se estah inserindo uma bola ou um x
 let mat = [[0,0,0],[0,0,0],[0,0,0]]; // matriz que guarda a posicao dos x e bola
 let win = 0; // flag que diz se alguem venceu ou nao
+let vitorias_jogador_1 = 0;
+let vitorias_jogador_2 = 0;
+let empate = 0;
 
     /* verificacoes se algum dos elementos da matriz foram clicados e chamada da funcao para preencher o espaco da matriz  */
 
@@ -13,6 +16,7 @@ let win = 0; // flag que diz se alguem venceu ou nao
     document.getElementById("c1").addEventListener("click", function(){gerencia("c1",2,0)});
     document.getElementById("c2").addEventListener("click", function(){gerencia("c2",2,1)});
     document.getElementById("c3").addEventListener("click", function(){gerencia("c3",2,2)});
+    document.getElementById("d1").addEventListener("click", function(){if(win == true ){turno = !turno}; limpa()});
 function gerencia(element, i, j){
     if(turno == 0){
         bola(element,i,j);
@@ -22,6 +26,23 @@ function gerencia(element, i, j){
         x(element,i,j);
         turno = 0;
     }
+}
+function limpa(){
+    document.getElementById("a1").removeAttribute("style");
+    document.getElementById("a2").removeAttribute("style");
+    document.getElementById("a3").removeAttribute("style");
+    document.getElementById("b1").removeAttribute("style");
+    document.getElementById("b2").removeAttribute("style");
+    document.getElementById("b3").removeAttribute("style");
+    document.getElementById("c1").removeAttribute("style");
+    document.getElementById("c2").removeAttribute("style");
+    document.getElementById("c3").removeAttribute("style");
+    for(let i = 0 ; i < 3 ; i++){
+        for(let j = 0 ; j < 3 ; j ++){
+            mat[i][j] = 0;
+        }
+    }
+    win = 0;
 }
 function bola(element,i,j){
 
@@ -61,6 +82,7 @@ function bola(element,i,j){
             flag_diag_prin = false;
             flag_diag_sec = false;
             win = 1;
+            vitorias_jogador_1++;
         }
         else{       // senao reinicia as flags e testa de novo
             if(i != 2){ 
@@ -73,9 +95,11 @@ function bola(element,i,j){
     if((flag_diag_prin == true || flag_diag_sec == true)){  // se alguma diagonal estiver completa alerte o jogador sobre a vitoria
         alert("o jogador 1 ganhou");
         win = 1;
+        vitorias_jogador_1++;
     }
-    if(flag_empate == true){
+    if(flag_empate == true && win == false){
         alert("deu velha");
+        empate++;
     }
     document.getElementById(element).style.backgroundImage = "url(o.png)"; // alterar a imagem de cada bloco da matriz
 }
@@ -116,6 +140,7 @@ function x(element,i,j){
             flag_diag_prin = false;
             flag_diag_sec = false;
             win = 1;
+            vitorias_jogador_2++;
         }
         else{       // senao reinicia as flags e testa de novo
             if(i != 2){ 
@@ -126,10 +151,12 @@ function x(element,i,j){
     }
     if((flag_diag_prin == true || flag_diag_sec == true)){  // se alguma diagonal estiver completa alerte o jogador sobre a vitoria
         alert("o jogador 2 ganhou");
+        vitorias_jogador_2++;
         win = 1;
     }
-    if(flag_empate == true){
+    if(flag_empate == true && win == false){
         alert("deu velha");
+        empate++;
     }
     document.getElementById(element).style.backgroundImage = "url(x.png)"; // alterar a imagem de cada bloco da matriz
 }
