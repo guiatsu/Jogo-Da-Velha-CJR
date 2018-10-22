@@ -1,0 +1,42 @@
+.vitorias {
+    padding-left: 25em;
+}
+.vitoria {
+    padding-right: 10em;
+}
+
+.botao {
+	border: solid black;
+	border-radius: 7px;
+	margin: 0em;
+	width: 120px;
+	font-size: 15px;
+}
+
+.botao:hover {
+	background-color: #ffb380;
+}
+
+.botao:active {
+	background-color: #ff6600;
+}
+
+.background {
+	background-color: #ff6600;
+	height: 900px;
+}
+
+.menu {
+	margin: auto;
+	width: 50%;
+	padding: 300px 0;
+	text-align: center;
+	background-color: white;
+	border: solid black;
+}
+
+.opcoes {
+	background-color: white;
+	padding: 1em;
+	margin: 0;
+}
