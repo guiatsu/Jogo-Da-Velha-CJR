@@ -114,7 +114,7 @@ function bola(element,i,j){
 }
 function x(element,i,j){
     if(mat[i][j] != 1 && mat[i][j] != 2 && win == 0){ // verificacao se clicou em um bloco valido da matriz
-
+        
         turno = 0; // mudanca de turno para o proximo jogador
         mat[i][j] = 2;  // colocando o valor de bola na matriz
         let flag_linha = true;  // flag que ficara falsa caso algo diferente de bola seja encontada na linha
@@ -122,7 +122,7 @@ function x(element,i,j){
         let flag_diag_prin = true; // flag que ficara falsa caso algo diferente de bola seja encontada na diagonal principal
         let flag_diag_sec = true; // flag que ficara falsa caso algo diferente de bola seja encontada na diagonal secundaria
         let flag_empate = true; // flag que ficara falsa caso algum 0 seja encontrado, ou caso algum jogador ganhe
-
+        
         
         for(i = 0 ; i < 3 && flag_linha == true && flag_coluna == true; i++){
             for(j=0;j<3;j++){
@@ -142,7 +142,7 @@ function x(element,i,j){
                         flag_diag_sec = false; // se algo diferente de bola foi encontrado na diagonal secundaria flag_diag_sec = false
                     }
                 }
-
+                
             }
             if(flag_linha == true || flag_coluna == true){ // caso alguma linha ou coluna esteja completa alertar o jogador sobre a vitoria
                 alert("o jogador 2 ganhou");
@@ -168,7 +168,7 @@ function x(element,i,j){
         for(i = 0; i < 3 ; i++){
             for(j = 0 ; j < 3; j++){
                 if(mat[i][j] == 0) // verificacao se ainda tem algum espaco vazio na matriz
-                    flag_empate = false;
+                flag_empate = false;
             }
         }
         if(flag_empate == true && win == false ){ // se a matriz tiver completa e ninguem tiver ganho entao alertar sobre empate
