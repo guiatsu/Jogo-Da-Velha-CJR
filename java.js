@@ -121,6 +121,8 @@ function x(element,i,j){
         let flag_coluna = true; // flag que ficara falsa caso algo diferente de bola seja encontada na coluna
         let flag_diag_prin = true; // flag que ficara falsa caso algo diferente de bola seja encontada na diagonal principal
         let flag_diag_sec = true; // flag que ficara falsa caso algo diferente de bola seja encontada na diagonal secundaria
+        let flag_empate = true; // flag que ficara falsa caso algum 0 seja encontrado, ou caso algum jogador ganhe
+
         
         for(i = 0 ; i < 3 && flag_linha == true && flag_coluna == true; i++){
             for(j=0;j<3;j++){
