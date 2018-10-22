@@ -1,15 +1,23 @@
+/*Estrutura da página*/
+
 .wrapper{
     width:100%;
+    background-color:#ff6600 
 }
 
-.center {
-    padding-top: 100px;
-    margin: auto;
-    width: 38%;
-
+.column{
+    background-color: white;
+    width: 50%;
+    border-left: solid 3px black;
+    border-right: solid 3px black;
+    display: flex;
+    flex-direction: column;
 }
 
-img{
+.gamebody {
+    padding: 1em;
+}
+.gamebody img{
     display: inline-block;
     padding: 0px;
     margin: 0px;
@@ -17,84 +25,65 @@ img{
     float:right;
 }
 
-#a1 {
+.field{
     height: 150px;
     width: 150px;
-    border-bottom: solid 1px;
-    border-right: solid 1px;
+    border: solid 2px black;
+    border-radius: 10px;
     display: inline-block;
     margin: 0px;
+    font-size: 3em;
 }
 
-#a2 {
-    height: 150px;
-    width: 150px;
-    border-bottom: solid 1px;
-    border-left: solid 1px;
-    border-right: solid 1px;
-    display: inline-block;
-    margin: 0px;
+.field:hover{
+    background-color: #ffb380;
 }
 
-#a3 {
-    height: 150px;
-    width: 150px;
-    border-bottom: solid 1px;
-    border-left: solid 1px;
-    display: inline-block;
-    margin: 0px;
+/*Formatação*/
+
+.center{
+    display: flex;
+    justify-content: center;
 }
 
-#b1 {
-    height: 150px;
-    width: 150px;
-    border-bottom: solid 1px;
-    border-right: solid 1px;
-    border-top: solid 1px;
-    display: inline-block;
-    margin: 0px;
+.titleTxt{
+    padding: 0.25em 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 4.5em;
 }
 
-#b2 {
-    height: 150px;
+.resetButton{
+    margin: 2em 0;
+    border: 2px solid black;
+    border-radius: 5px;
     width: 150px;
-    border: solid 1px;
-    display: inline-block;
-    margin: 0px;
+    height: 2.5em;
+    font-size: 1.2em;
+    color: black;
+    background-color: white;
+    cursor: pointer;
 }
 
-#b3 {
-    height: 150px;
-    width: 150px;
-    border-bottom: solid 1px;
-    border-left: solid 1px;
-    border-top: solid 1px;
-    display: inline-block;
-    margin: 0px;
+.resetButton:hover{
+    background-color: #ffb380;
 }
 
-#c1 {
-    height: 150px;
-    width: 150px;
-    border-top: solid 1px;
-    border-right: solid 1px;
-    display: inline-block;
-    margin: 0px;
+.resetButton:active{
+    background-color: #ff6600;
 }
-#c2 {
-    height: 150px;
-    width: 150px;
-    border-top: solid 1px;
-    border-left: solid 1px;
-    border-right: solid 1px;
-    display: inline-block;
-    margin: 0px;
-}
-#c3 {
-    height: 150px;
-    width: 150px;
-    border-top: solid 1px;
-    border-left: solid 1px;
-    display: inline-block;
-    margin: 0px;
-}
+
+
+
+#game{}
+
+#a1 {}
+#a2 {}
+#a3 {}
+
+#b1 {}
+#b2 {}
+#b3 {}
+
+#c1 {}
+#c2 {}
+#c3 {}
