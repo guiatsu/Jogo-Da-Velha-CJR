@@ -3,7 +3,7 @@ let mat = [[0,0,0],[0,0,0],[0,0,0]]; // matriz que guarda a posicao dos x e bola
 let win = 0; // flag que diz se alguem venceu ou nao
 let vitorias_jogador_1 = 0;
 let vitorias_jogador_2 = 0;
-let empate = 0;
+let empate = 1;
 
     /* verificacoes se algum dos elementos da matriz foram clicados e chamada da funcao para preencher o espaco da matriz  */
 
@@ -18,6 +18,7 @@ let empate = 0;
     document.getElementById("c3").addEventListener("click", function(){gerencia("c3",2,2)});
     document.getElementById("d1").addEventListener("click", function(){if(win == true ){turno = !turno}; limpa()});
 function gerencia(element, i, j){
+
     if(turno == 0){
         bola(element,i,j);
     }
@@ -40,11 +41,14 @@ function limpa(){
             mat[i][j] = 0;
         }
     }
+    document.getElementById("jgdr_1").innerHTML= `Vitorias do jogador O: ${vitorias_jogador_1}`;
+    document.getElementById("jgdr_2").innerHTML= `Vitorias do jogador X: ${vitorias_jogador_2}`;
     win = 0;
+    empate = 1;
 }
 function bola(element,i,j){
     if(mat[i][j] != 1 && mat[i][j] != 2 && win == 0){
-
+        console.log(vitorias_jogador_1)
         turno = 1;
         mat[i][j] = 1;  // colocando o valor de bola na matriz
         let flag_linha = true;  // flag que ficara falsa caso algo diferente de bola seja encontada na linha
@@ -71,9 +75,6 @@ function bola(element,i,j){
                         flag_diag_sec = false; // se algo diferente de bola foi encontrado na diagonal secundaria flag_diag_sec = false
                     }
                 }
-                if(mat[i][j] == 0){
-                    flag_empate = false;
-                }
             }
             if(flag_linha == true || flag_coluna == true){ // caso alguma linha ou coluna esteja completa alertar o jogador sobre a vitoria
                 alert("o jogador 1 ganhou");
@@ -96,6 +97,12 @@ function bola(element,i,j){
             alert("o jogador 1 ganhou");
             win = 1;
             vitorias_jogador_1++;
+        }
+        for(i = 0; i < 3 ; i++){
+            for(j = 0 ; j < 3; j++){
+                if(mat[i][j] == 0)
+                    flag_empate = false;
+            }
         }
         if(flag_empate == true && win == false){
             alert("deu velha");
@@ -132,9 +139,7 @@ function x(element,i,j){
                         flag_diag_sec = false; // se algo diferente de bola foi encontrado na diagonal secundaria flag_diag_sec = false
                     }
                 }
-                if(mat[i][j] == 0){
-                    flag_empate = false;
-                }
+
             }
             if(flag_linha == true || flag_coluna == true){ // caso alguma linha ou coluna esteja completa alertar o jogador sobre a vitoria
                 alert("o jogador 2 ganhou");
@@ -157,7 +162,13 @@ function x(element,i,j){
             vitorias_jogador_2++;
             win = 1;
         }
-        if(flag_empate == true && win == false){
+        for(i = 0; i < 3 ; i++){
+            for(j = 0 ; j < 3; j++){
+                if(mat[i][j] == 0)
+                    flag_empate = false;
+            }
+        }
+        if(flag_empate == true && win == false ){
             alert("deu velha");
             empate++;
         }
