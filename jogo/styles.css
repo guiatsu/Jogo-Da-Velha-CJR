@@ -37,6 +37,25 @@
 
 .field:hover{
     background-color: #ffb380;
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+}
+.scoreBox{
+    margin: 0 1em;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: black;
+    background-color: white;
+    
 }
 
 /*Formatação*/
