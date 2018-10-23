@@ -6,6 +6,8 @@
 }
 
 .column{
+    font-family: 'Bai Jamjuree', sans-serif;
+    min-height: 100vh;
     background-color: white;
     width: 50%;
     border-left: solid 3px black;
@@ -71,11 +73,9 @@
     font-size: 4.5em;
 }
 
-.resetButton{
-    margin: 2em 0;
+.Button{ 
     border: 2px solid black;
     border-radius: 5px;
-    width: 150px;
     height: 2.5em;
     font-size: 1.2em;
     color: black;
@@ -83,11 +83,21 @@
     cursor: pointer;
 }
 
-.resetButton:hover{
+.resetButton{
+    margin: 2em 0.25em;
+    width: 150px;
+}
+
+.optionButton{
+    margin: 1em 0;
+    width: 200px;
+}
+
+.Button:hover{
     background-color: #ffb380;
 }
 
-.resetButton:active{
+.Button:active{
     background-color: #ff6600;
 }
 

@@ -27,23 +27,11 @@
 	height: 900px;
 }
 
-.menu {
-	margin: auto;
-	width: 50%;
-	min-height: 100vh;
-	text-align: center;
-	background-color: white;
-	border: solid black;
-
+.menuTitle {
+	padding-bottom: 2em;
 }
 
-.opcoes {
-	background-color: white;
-	padding: 1em;
-	padding-left: 14em;
-	margin: 0;
-	flex-direction: column;
-}
+
 * {
 	font-family: 'Bai Jamjuree', sans-serif;
 }
