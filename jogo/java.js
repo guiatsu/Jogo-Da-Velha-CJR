@@ -5,6 +5,14 @@ let vitorias_jogador_1 = 0; // contador de vitorias da O
 let vitorias_jogador_2 = 0; // contador de vitorias do X
 let empate = 0; // contador de empates
 
+let jogador_1 = sessionStorage.getItem("jogador_1");
+let jogador_2 = sessionStorage.getItem("jogador_2");
+if(jogador_1 == "")
+    jogador_1 = "jogador 1";
+
+if(jogador_2 == "")
+    jogador_2 = "jogador 2";
+
     /* verificacoes se algum dos elementos da matriz foram clicados e chamada da funcao para preencher o espaco da matriz  */
 
     document.getElementById("a1").addEventListener("click", function(){gerencia("a1",0,0)}); 
@@ -26,8 +34,10 @@ function gerencia(element, i, j){ // funcao que verifica qual e o turno atual e 
         x(element,i,j);
     }
 }
+
 function limpa(){ // funcao que reseta o grid do jogo
 
+    
     document.getElementById("a1").removeAttribute("style"); // comando para remover a imagem do elemento
     document.getElementById("a2").removeAttribute("style");
     document.getElementById("a3").removeAttribute("style");
@@ -77,7 +87,7 @@ function bola(element,i,j){
                 }
             }
             if(flag_linha == true || flag_coluna == true){ // caso alguma linha ou coluna esteja completa alertar o jogador sobre a vitoria
-                alert("o jogador 1 ganhou"); // mensagem que aparece quando o O ganha
+                alert(`o ${jogador_1} ganhou`); // mensagem que aparece quando o O ganha
                 flag_linha = false;
                 flag_coluna = false;
                 flag_diag_prin = false;
@@ -94,7 +104,7 @@ function bola(element,i,j){
             }
         }
         if((flag_diag_prin == true || flag_diag_sec == true)){  // se alguma diagonal estiver completa alerte o jogador sobre a vitoria
-            alert("o jogador 1 ganhou");
+            alert(`o ${jogador_1} ganhou`);
             win = 1;
             vitorias_jogador_1++;
         }
@@ -145,7 +155,7 @@ function x(element,i,j){
                 
             }
             if(flag_linha == true || flag_coluna == true){ // caso alguma linha ou coluna esteja completa alertar o jogador sobre a vitoria
-                alert("o jogador 2 ganhou");
+                alert(`o ${jogador_2} ganhou`);
                 flag_linha = false;
                 flag_coluna = false;
                 flag_diag_prin = false;
@@ -161,7 +171,7 @@ function x(element,i,j){
             }
         }
         if((flag_diag_prin == true || flag_diag_sec == true)){  // se alguma diagonal estiver completa alerte o jogador sobre a vitoria
-            alert("o jogador 2 ganhou");
+            alert(`o ${jogador_2} ganhou`);
             vitorias_jogador_2++;
             win = 1;
         }

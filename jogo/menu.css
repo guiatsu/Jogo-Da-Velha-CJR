@@ -36,6 +36,11 @@
 	border: solid black;
 
 }
+.form {
+	text-align: center;
+	width: 50%;
+	margin: auto;
+}
 
 .opcoes {
 	background-color: white;
