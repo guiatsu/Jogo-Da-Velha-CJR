@@ -7,10 +7,10 @@ let empate = 0; // contador de empates
 
 let jogador_1 = sessionStorage.getItem("jogador_1");
 let jogador_2 = sessionStorage.getItem("jogador_2");
-if(jogador_1 == "")
+if(jogador_1 == "" || jogador_1 == "null")
     jogador_1 = "O";
 
-if(jogador_2 == "")
+if(jogador_2 == "" || jogador_2 == "null")
     jogador_2 = "X";
 
 document.getElementById("namej1").innerHTML=`${jogador_1}`
