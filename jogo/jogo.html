@@ -13,39 +13,42 @@
 </head>
 
 <body>
-        <div class="wrapper center">
-                <div class="column">
-                    <div class="center">
-                        <span class="titleTxt">Jogo da Velha</span>    
-                    </div>
-                    <div class="center">
-                        <div class = "vitorias">
-                                <span class = "vitoria" id = "jgdr_1">Vitorias jogador O: 0</span>   
-                                <span class = "vitoria" id = "jgdr_2">Vitorias jogador X: 0</span>
-                        </div>
-                    </div>
-                    <div class="gamebody center">
-                        <div id = "game">
-                            <div class="field" id = "a1"></div>
-                            <div class="field" id = "a2"></div>
-                            <div class="field" id = "a3"></div>
-                            <br>
-                            <div class="field" id = "b1"></div>
-                            <div class="field" id = "b2"></div>
-                            <div class="field" id = "b3"></div>
-                            <br>
-                            <div class="field" id = "c1"></div>
-                            <div class="field" id = "c2"></div>
-                            <div class="field" id = "c3"></div>
-                        </div>
-                    </div>
-                    <div class=" center">
-                        <button type = "button" id = "d1" class="resetButton">Resetar</button>
-                    </div>    
-                    </div>
+    <div class="wrapper center">
+        <div class="column">
+            <div class="center">
+                <span class="titleTxt">Jogo da Velha</span>    
+            </div>
+            <div class="center">
+                <div class ="row">
+                    <h2>O </h2>
+                    <div class="scoreBox" id = "jgdr_1">0</div>   
+                    <h2>X </h2>
+                    <div class="scoreBox" id = "jgdr_2">0</div>
                 </div>
             </div>
+            <div class="gamebody center">
+                <div id = "game">
+                    <div class="field" id = "a1"></div>
+                    <div class="field" id = "a2"></div>
+                    <div class="field" id = "a3"></div>
+                    <br>
+                    <div class="field" id = "b1"></div>
+                    <div class="field" id = "b2"></div>
+                    <div class="field" id = "b3"></div>
+                    <br>
+                    <div class="field" id = "c1"></div>
+                    <div class="field" id = "c2"></div>
+                    <div class="field" id = "c3"></div>
+                </div>
+            </div>
+            <div class=" center">
+                <button type = "button" id = "d1" class="Button resetButton">Resetar</button>
+                <a href="menu.html"><button type = "button" id = "d1" class="Button resetButton">Menu</button></a>
+            </div>           
+        </div>
+    </div>
 
     <script src = "java.js"></script>
+
 </body>
 </html>

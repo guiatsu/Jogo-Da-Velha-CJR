@@ -1,5 +1,6 @@
-document.getElementById("2_jgdr").addEventListener("click", function(){joga2()});
+document.getElementById("jogar").addEventListener("click", function(){joga2()});
 
 function joga2(){
-    window.location = "formulario.html";
+	document.getElementById("opcoesdiv").style.display="none";
+    // window.location = "formulario.html";
 }
