@@ -1,0 +1,80 @@
+.vitorias {
+    padding-left: 25em;
+}
+.vitoria {
+    padding-right: 10em;
+}
+
+.botao {
+	border: solid black;
+	border-radius: 7px;
+	margin: 0em;
+	margin-bottom: 2em;
+	width: 120px;
+	font-size: 15px;
+}
+
+.botao:hover {
+	background-color: #ffb380;
+}
+
+.botao:active {
+	background-color: #ff6600;
+}
+
+.background {
+	background-color: #ff6600;
+	height: 900px;
+}
+
+.menu {
+	margin: auto;
+	width: 50%;
+	min-height: 100vh;
+	text-align: center;
+	background-color: white;
+	border: solid black;
+
+}
+.form {
+	text-align: center;
+	width: 50%;
+	margin: auto;
+}
+
+.opcoes {
+	background-color: white;
+	padding: 1em;
+	padding-left: 14em;
+	margin: 0;
+	flex-direction: column;
+}
+
+* {
+	font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.opcoesdiv{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.textInput{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 2.5em;
+    width: 70%
+    font-size: 1.2em;
+    color: black;
+    background-color: white;
+
+}
+
+#dv2{
+	width: 100%;
+}
+#jogar{}
+#play{}
+#name_1{}
+#name_2{}

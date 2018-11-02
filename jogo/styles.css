@@ -1,0 +1,129 @@
+/*Estrutura da página*/
+
+.wrapper{
+    width:100%;
+    background-color:#ff6600 
+}
+
+.column{
+    font-family: 'Bai Jamjuree', sans-serif;
+    min-height: 100vh;
+    background-color: white;
+    width: 50%;
+    border-left: solid 3px black;
+    border-right: solid 3px black;
+    display: flex;
+    flex-direction: column;
+}
+
+.gamebody {
+    padding: 1em;
+}
+.gamebody img{
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+
+    float:right;
+}
+
+.field{
+    height: 150px;
+    width: 150px;
+    border: solid 2px black;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 0px;
+    font-size: 3em;
+}
+
+.field:hover{
+    background-color: #ffb380;
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+}
+.scoreBox{
+    margin: 0 1em;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: black;
+    background-color: white;
+    
+}
+
+/*Formatação*/
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.titleTxt{
+    padding: 0.25em 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 4.5em;
+}
+
+.Button{ 
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 2.5em;
+    font-size: 1.2em;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.resetButton{
+    margin: 2em 0.25em;
+    width: 150px;
+}
+
+.optionButton{
+    margin: 1em 0;
+    width: 200px;
+}
+
+.textInput{
+    border: 2px solid #A9A9A9;
+    border-radius: 5px;
+    height: 2.5em;
+    width: 70%
+    font-size: 1.2em;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.Button:hover{
+    background-color: #ffb380;
+}
+
+.Button:active{
+    background-color: #ff6600;
+}
+
+
+
+#game{}
+
+#a1 {}
+#a2 {}
+#a3 {}
+
+#b1 {}
+#b2 {}
+#b3 {}
+
+#c1 {}
+#c2 {}
+#c3 {}
