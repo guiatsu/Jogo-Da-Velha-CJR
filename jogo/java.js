@@ -8,11 +8,13 @@ let empate = 0; // contador de empates
 let jogador_1 = sessionStorage.getItem("jogador_1");
 let jogador_2 = sessionStorage.getItem("jogador_2");
 if(jogador_1 == "")
-    jogador_1 = "jogador 1";
+    jogador_1 = "O";
 
 if(jogador_2 == "")
-    jogador_2 = "jogador 2";
+    jogador_2 = "X";
 
+document.getElementById("namej1").innerHTML=`${jogador_1}`
+document.getElementById("namej2").innerHTML=`${jogador_2}`
     /* verificacoes se algum dos elementos da matriz foram clicados e chamada da funcao para preencher o espaco da matriz  */
 
     document.getElementById("a1").addEventListener("click", function(){gerencia("a1",0,0)}); 
@@ -52,8 +54,8 @@ function limpa(){ // funcao que reseta o grid do jogo
             mat[i][j] = 0;
         }
     }
-    document.getElementById("jgdr_1").innerHTML= `Vitorias do jogador O: ${vitorias_jogador_1}`; // atualizando a quantidade de vitorias do jogador O na pagina html
-    document.getElementById("jgdr_2").innerHTML= `Vitorias do jogador X: ${vitorias_jogador_2}`; // atualizando a quantidade de vitorias do jogador O na pagina html
+    document.getElementById("jgdr_1").innerHTML= `${vitorias_jogador_1}`; // atualizando a quantidade de vitorias do jogador O na pagina html
+    document.getElementById("jgdr_2").innerHTML= `${vitorias_jogador_2}`; // atualizando a quantidade de vitorias do jogador O na pagina html
     win = 0; // resetando o valor da flag de vitoria
     empate = 1; // resetando o valor da flag de empate
 }
@@ -87,7 +89,7 @@ function bola(element,i,j){
                 }
             }
             if(flag_linha == true || flag_coluna == true){ // caso alguma linha ou coluna esteja completa alertar o jogador sobre a vitoria
-                alert(`o ${jogador_1} ganhou`); // mensagem que aparece quando o O ganha
+                alert(`${jogador_1} ganhou`); // mensagem que aparece quando o O ganha
                 flag_linha = false;
                 flag_coluna = false;
                 flag_diag_prin = false;
@@ -104,7 +106,7 @@ function bola(element,i,j){
             }
         }
         if((flag_diag_prin == true || flag_diag_sec == true)){  // se alguma diagonal estiver completa alerte o jogador sobre a vitoria
-            alert(`o ${jogador_1} ganhou`);
+            alert(`${jogador_1} ganhou`);
             win = 1;
             vitorias_jogador_1++;
         }
@@ -116,7 +118,7 @@ function bola(element,i,j){
             }
         }
         if(flag_empate == true && win == false){ // se todos os espacos estao preenchidos e ninguem ganhou entao alertar sobre empate
-            alert("deu velha");
+            alert("Deu velha");
             empate++;
         }
         document.getElementById(element).style.backgroundImage = "url(o.png)"; // alterar a imagem de cada bloco da matriz
@@ -155,7 +157,7 @@ function x(element,i,j){
                 
             }
             if(flag_linha == true || flag_coluna == true){ // caso alguma linha ou coluna esteja completa alertar o jogador sobre a vitoria
-                alert(`o ${jogador_2} ganhou`);
+                alert(`${jogador_2} ganhou`);
                 flag_linha = false;
                 flag_coluna = false;
                 flag_diag_prin = false;
@@ -171,7 +173,7 @@ function x(element,i,j){
             }
         }
         if((flag_diag_prin == true || flag_diag_sec == true)){  // se alguma diagonal estiver completa alerte o jogador sobre a vitoria
-            alert(`o ${jogador_2} ganhou`);
+            alert(`${jogador_2} ganhou`);
             vitorias_jogador_2++;
             win = 1;
         }

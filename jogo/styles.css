@@ -93,6 +93,17 @@
     width: 200px;
 }
 
+.textInput{
+    border: 2px solid #A9A9A9;
+    border-radius: 5px;
+    height: 2.5em;
+    width: 70%
+    font-size: 1.2em;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
 .Button:hover{
     background-color: #ffb380;
 }

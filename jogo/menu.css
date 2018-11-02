@@ -49,10 +49,32 @@
 	margin: 0;
 	flex-direction: column;
 }
+
 * {
 	font-family: 'Bai Jamjuree', sans-serif;
 }
 
-#opcoesdiv{}
+.opcoesdiv{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
 
+.textInput{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 2.5em;
+    width: 70%
+    font-size: 1.2em;
+    color: black;
+    background-color: white;
+
+}
+
+#dv2{
+	width: 100%;
+}
 #jogar{}
+#play{}
+#name_1{}
+#name_2{}
